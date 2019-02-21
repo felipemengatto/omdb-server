@@ -33,4 +33,4 @@ app.get('/movie/:id', async (req, res) => {
 
 });
 
-http.createServer(app).listen(3000, () => console.log("Servidor rodando local na porta 3000"));
+http.createServer(app).listen(80, () => console.log('Server is Up!'));
