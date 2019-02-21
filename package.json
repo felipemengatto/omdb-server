@@ -1,0 +1,16 @@
+{
+  "name": "meu-primeiro-servidor-nodejs",
+  "version": "1.0.0",
+  "description": "Meu primeiro servidor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Castiglioni",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "omdb": "^0.8.0",
+    "omdbapi": "^3.0.0"
+  }
+}
