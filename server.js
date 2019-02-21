@@ -23,7 +23,7 @@ app.get('/search/:search', async (req, res) => {
 
         res.send(Object.values(movies));
     } catch (error) {
-        res.status(500).json({ error: error.toString() });
+        res.status(500).json({ error: 'Ops, ocorreu um erro no servidor!' });
     }
 
 });
@@ -45,7 +45,7 @@ app.get('/movie/:id', async (req, res) => {
 
         res.send(data);
     } catch (error) {
-        res.status(500).json({ error: error.toString() });
+        res.status(500).json({ error: 'Ops, ocorreu um erro no servidor!' });
     }
 
 });
