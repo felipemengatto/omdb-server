@@ -32,8 +32,18 @@ app.get('/movie/:id', async (req, res) => {
     const id = req.param('id');
 
     try {
-        const movie = await omdb.get({ id })
-        res.send(Object.values(movie));
+        const movie = await omdb.get({ id });
+
+        const genre = Object.values(movie.genre).join(', ');
+        const director = Object.values(movie.director).join(', ');
+
+        const data = {
+            ...movie,
+            genre,
+            director
+        }
+
+        res.send(data);
     } catch (error) {
         res.status(500).json({ error: error.toString() });
     }
