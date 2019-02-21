@@ -7,7 +7,7 @@ app.get('/search/:search', async (req, res) => {
     const search = req.param('search');
 
     try {
-        const movies = await omdb.search({ search, });
+        const movies = await omdb.search({ search, type: 'movie' });
 
         for (const index in movies) {
             const { genre } = await omdb.get({ id: movies[index].imdbid });
