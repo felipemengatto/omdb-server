@@ -39,4 +39,4 @@ app.get('/movie/:id', async (req, res) => {
 
 });
 
-http.createServer(app).listen(3000, () => console.log('Server is Up!'));
+http.createServer(app).listen(80, () => console.log('Server is Up!'));
