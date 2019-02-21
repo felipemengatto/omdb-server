@@ -17,10 +17,11 @@ app.get('/search/:search', async (req, res) => {
 
         for (const index in movies) {
             const { genre } = await omdb.get({ id: movies[index].imdbid });
-            movies[index] = { ...movies[index], genre }
+            const genres = Object.values(genre).join(', ');
+            movies[index] = { ...movies[index], genre: genres }
         }
 
-        res.send(movies);
+        res.send(Object.values(movies));
     } catch (error) {
         res.status(500).json({ error: error.toString() });
     }
@@ -32,7 +33,7 @@ app.get('/movie/:id', async (req, res) => {
 
     try {
         const movie = await omdb.get({ id })
-        res.send(movie);
+        res.send(Object.values(movie));
     } catch (error) {
         res.status(500).json({ error: error.toString() });
     }
