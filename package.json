@@ -9,6 +9,7 @@
   "author": "Matheus Castiglioni",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.2",
     "omdb": "^0.8.0",
     "omdbapi": "^3.0.0"

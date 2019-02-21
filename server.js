@@ -1,7 +1,10 @@
-const http = require("http");
-const express = require("express");
+const http = require('http');
+const express = require('express');
+const cors = require('cors');
 const omdb = new (require('omdbapi'))('fa3bee26');
 const app = express();
+
+app.use(cors());
 
 app.get('/search/:search', async (req, res) => {
     const search = req.param('search');
