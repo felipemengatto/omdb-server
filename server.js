@@ -50,4 +50,5 @@ app.get('/movie/:id', async (req, res) => {
 
 });
 
-http.createServer(app).listen(80, () => console.log('Server is Up!'));
+const port = 3030;
+http.createServer(app).listen(3030, () => console.log(`Server is Up! - http://localhost:${port}`));
